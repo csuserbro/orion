@@ -346,8 +346,9 @@ function Library:Window(options)
             removeBtn.Parent = settingsTab
             removeBtn.BackgroundColor3 = Color3.fromRGB(30,30,30)
 
-            -- Пример структуры конфига
-            local config = {
+        -- Глобальный config (перемещён выше)
+        if not Library._config then
+            Library._config = {
                 watermark = {
                     enabled = true,
                     name = "corup.cc",
@@ -365,6 +366,8 @@ function Library:Window(options)
                 },
                 menu_color = "#1e1e1e"
             }
+        end
+        local config = Library._config
 
             -- Функции для работы с конфигом
             local function SaveConfig()
