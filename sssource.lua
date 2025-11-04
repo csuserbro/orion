@@ -5,7 +5,7 @@ if not Library._config then
     Library._config = {
         watermark = {
             enabled = true,
-            name = "corup.cc",
+            name = "xylimysora",
             show_fps = true,
             show_ping = true
         },
