@@ -1,5 +1,28 @@
 local Library = {}
 
+-- Глобальный config для всех функций и секций
+if not Library._config then
+    Library._config = {
+        watermark = {
+            enabled = true,
+            name = "corup.cc",
+            show_fps = true,
+            show_ping = true
+        },
+        blur = {
+            enabled = true
+        },
+        notifications = {
+            position = "bottomright"
+        },
+        hotkeys = {
+            enabled = true
+        },
+        menu_color = "#1e1e1e"
+    }
+end
+local config = Library._config
+
 local NeverloseVersion = "v1.1A."
 
 local TweenService = game:GetService("TweenService")
